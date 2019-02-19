@@ -48,11 +48,12 @@ while (player1.alive? && player2.alive?) do
 end
 
 if player1.lives == 0
-   puts "---#{player2.name} wins with #{player2.lives}/3 lives"
+   puts "-----------------------------"
+   puts "#{player2.name} wins with a score of  #{player2.lives}/3 "
 elsif player2.lives == 0
-   puts "---#{player1.name} wins with #{player1.lives}/3 lives"
+   puts "#{player1.name} wins with a score of #{player1.lives}/3 "
 end
 
-puts "-----------GAME OVER-----------"
+puts "----------GAME OVER------------"
 
 
