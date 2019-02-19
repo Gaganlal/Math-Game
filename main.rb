@@ -26,14 +26,14 @@ while (player1.alive? && player2.alive?) do
   question = Questions.new()
 
   puts "-----------NEW TURN-----------"
-
+  # ask question
   puts "#{player.name}: #{question.print}"
  
   # inputted answer
   answer = gets.chomp.to_i
 
   if answer == question.answer
-  puts "Correct!"
+  puts "Good job, that is correct!"
   # display lives of players
   puts "#{player1.name} : #{player1.lives}/3 lives and #{player2.name} : #{player2.lives}/3 lives"
   else 
@@ -42,6 +42,8 @@ while (player1.alive? && player2.alive?) do
     puts "Incorrect! You lost a life my friend!!"
     puts "#{player1.name} : #{player1.lives}/3 lives and #{player2.name} : #{player2.lives}/3 lives"
   end
+
+  # IMPORTANT: here i am resetting current_player value to 0 or 1. That way my if statement on line 20 can work
   current_player = (current_player + 1) % 2
 end
 
