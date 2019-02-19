@@ -15,7 +15,6 @@ player2 = Players.new(player_2_name)
 
 
   
-# execute ternery operator if statement
 while (player1.alive? && player2.alive?) do
   # setting player to player1 or player 2, based off current_player (value)
   if current_player == 1 
@@ -37,7 +36,8 @@ while (player1.alive? && player2.alive?) do
   puts "Correct!"
   # display lives of players
   puts "#{player1.name} : #{player1.lives}/3 lives and #{player2.name} : #{player2.lives}/3 lives"
-  else
+  else 
+    # accessing player lives and deducting 1.
     player.lives -= 1
     puts "Incorrect! You lost a life my friend!!"
     puts "#{player1.name} : #{player1.lives}/3 lives and #{player2.name} : #{player2.lives}/3 lives"
